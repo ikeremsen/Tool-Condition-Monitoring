@@ -1,0 +1,42 @@
+Indicator medians per speed and class:
+                hf_energy_db  spectral_centroid  hf_kurtosis  order1_db  order4_db  order4_minus_1_db
+rpm wear_class                                                                                       
+520 base                0.00               1.17        38.77      16.98      13.39              -3.45
+    broken              5.80               1.10        54.22      11.87       7.23              -4.53
+    fresh               7.70               1.06        20.00      12.58      12.14              -0.41
+    moderate            5.40               0.98        19.39      13.51       9.37              -4.27
+635 base                0.00               1.09        40.35      16.17       6.97              -9.11
+    broken              2.03               1.08        20.76      14.64       9.11              -4.13
+    fresh               2.82               1.13        15.00      13.94      12.34              -0.32
+    moderate            2.68               0.97        18.02      12.45      11.97               0.30
+
+Files used: 1036 (fresh/moderate/broken). Original takes per class:
+wear_class  fresh  moderate  broken
+rpm                                
+520            24        16      17
+635            19        16      18
+
+=== All 6 indicators, balanced accuracy (chance = 0.33) ===
+  train 520 -> test 635 : 0.49   <- the main question
+  train 635 -> test 520 : 0.47
+  same speed, new takes : 520 = 0.78, 635 = 0.59   (upper reference)
+
+Model weights trained at 520 rpm (on standardised indicators; + means 'pushes towards this class'):
+          hf_energy_db  spectral_centroid  hf_kurtosis  order1_db  order4_db  order4_minus_1_db
+fresh             0.10               1.39         1.48       0.25       0.73               0.37
+moderate          0.12              -3.09        -2.27      -0.04      -0.15              -0.08
+broken           -0.22               1.70         0.79      -0.21      -0.59              -0.29
+
+=== One indicator at a time, balanced accuracy ===
+                   520->635  635->520  same speed 520  same speed 635
+indicator                                                            
+hf_energy_db           0.42      0.37            0.41            0.42
+spectral_centroid      0.54      0.52            0.49            0.52
+hf_kurtosis            0.35      0.32            0.44            0.28
+order1_db              0.28      0.29            0.33            0.34
+order4_db              0.39      0.44            0.50            0.38
+order4_minus_1_db      0.34      0.40            0.42            0.40
+
+=== Fresh vs broken only, balanced accuracy (chance = 0.50) ===
+  all 6 indicators             520->635 0.57   635->520 0.58   same speed 520 0.79   635 0.63
+  tooth minus revolution only  520->635 0.63   635->520 0.67   same speed 520 0.67   635 0.59

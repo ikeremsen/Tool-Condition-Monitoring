@@ -1,0 +1,20 @@
+# Raw datasets: too large for GitHub and not ours to redistribute.
+# Download instructions are in README.md and reports/02_sound_tool_wear.md.
+SegmentedData/
+MillNASA/
+zips/
+*.wav
+*.mat
+*.zip
+
+# Python environment and caches
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Windows / OneDrive / editor files
+desktop.ini
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,114 @@
+======================================================================
+Files found: 1488   readable: 1488   unreadable: 0
+
+Name / folder problems:
+  none - every file name agrees with its folders
+
+1) Number of files per rpm and class
+wear_class  base  fresh  moderate  broken   All
+rpm                                            
+520          175    200       188     181   744
+635          172    181       188     203   744
+All          347    381       376     384  1488
+
+2) Number of DIFFERENT tool letters per rpm and class (= physical tools, if one letter = one tool)
+wear_class  base  fresh  moderate  broken
+rpm                                      
+520            1      1         1       1
+635            1      1         1       1
+   Tool letters in each group:
+wear_class  base fresh moderate broken
+rpm                                   
+520         BASE     A        B      C
+635         BASE     A        B      C
+
+3) Number of recordings per tool letter
+         wear_class  n_files  first_sample  last_sample
+rpm tool                                               
+520 A         fresh      200             1          200
+    B      moderate      188             1          188
+    BASE       base      175             1          175
+    C        broken      181             1          181
+635 A         fresh      181             1          181
+    B      moderate      188             1          188
+    BASE       base      172             1          172
+    C        broken      203             1          203
+
+4) Does any tool letter appear in more than one wear class?
+   Within each rpm: no - every tool letter belongs to exactly one class.
+   Note: letters ['A', 'B', 'BASE', 'C'] are used at both speeds. The file names cannot tell us
+   whether e.g. 'A' at 520 rpm and 'A' at 635 rpm is the same physical tool.
+     A: class at both speeds = ['fresh']
+     B: class at both speeds = ['moderate']
+     BASE: class at both speeds = ['base']
+     C: class at both speeds = ['broken']
+
+5) Audio format
+   Sampling rate (Hz):  {48000: 1488}
+   Channels:            {2: 1488}
+   Sample format:       {'PCM_32': 1488}
+   Duration (s):
+count    1488.000
+mean        9.592
+std         1.637
+min         0.164
+25%        10.000
+50%        10.000
+75%        10.000
+max        10.000
+   Majority format: 48000 Hz, 2 channel(s), 480000 frames = 10.00 s, PCM_32
+   Files with a different sampling rate / channel count / format: 0
+   Files with a different length than 10 s: 114
+wear_class  base  fresh  moderate  broken
+rpm                                      
+520            6     23        15      16
+635            3     19        15      17
+   Their durations (s):
+count    114.00
+mean       4.68
+std        2.98
+min        0.16
+25%        1.73
+50%        4.61
+75%        7.33
+max        9.98
+   Short files (file: seconds):
+     RPM520 A: 2:1.7, 4:8.9, 22:6.8, 29:3.6, 34:3.3, 52:4.6, 56:1.9, 63:5.5, 68:1.8, 78:6.7, 88:8.2, 97:1.0, 104:2.0, 118:0.8, 124:1.5, 126:5.6, 132:8.5, 138:9.0, 148:0.8, 154:4.7, 164:0.6, 171:1.4, 186:8.0
+     RPM520 B: 3:1.7, 15:7.4, 30:3.0, 37:7.2, 42:5.0, 55:4.6, 68:6.0, 81:0.4, 94:1.1, 109:0.5, 126:3.0, 140:1.7, 153:1.7, 167:1.4, 180:7.2
+     RPM520 BASE: 10:6.7, 22:3.3, 27:8.0, 46:0.8, 54:5.6, 80:1.6
+     RPM520 C: 5:4.3, 8:7.9, 20:9.4, 33:0.5, 45:9.6, 58:0.4, 70:6.9, 83:7.3, 95:3.4, 108:4.3, 120:8.2, 133:3.6, 146:2.7, 159:2.3, 170:6.4, 173:3.5
+     RPM635 A: 3:5.1, 4:1.0, 10:0.2, 22:2.7, 24:2.9, 27:8.1, 40:6.2, 54:4.3, 67:6.1, 81:3.2, 93:2.7, 101:9.3, 106:8.6, 119:7.5, 132:1.4, 141:1.0, 146:4.9, 159:5.3, 173:1.0
+     RPM635 B: 5:9.1, 18:4.3, 30:6.0, 43:5.6, 55:7.5, 68:0.5, 81:5.7, 94:3.6, 107:0.9, 119:6.2, 131:10.0, 143:8.3, 155:8.3, 167:1.6, 180:3.6
+     RPM635 BASE: 4:8.3, 21:8.2, 80:1.7
+     RPM635 C: 4:9.0, 17:2.9, 29:7.3, 42:9.8, 54:8.9, 64:5.0, 67:3.5, 79:9.5, 92:7.1, 104:9.7, 118:4.8, 130:1.8, 143:9.3, 156:1.5, 169:1.9, 182:0.3, 195:5.2
+
+6) Stereo channels
+   Files where left and right are bit-identical: 1488 of 1488
+   Left/right correlation per class:
+                min  50%  max
+rpm wear_class               
+520 base        1.0  1.0  1.0
+    fresh       1.0  1.0  1.0
+    moderate    1.0  1.0  1.0
+    broken      1.0  1.0  1.0
+635 base        1.0  1.0  1.0
+    fresh       1.0  1.0  1.0
+    moderate    1.0  1.0  1.0
+    broken      1.0  1.0  1.0
+
+7) Level and clipping
+   Peak amplitude (full scale = 1.0) and RMS per group:
+                peak_min  peak_median  peak_max  rms_median
+rpm wear_class                                             
+520 base          0.2000       0.2570    0.3549      0.0488
+    fresh         0.0154       0.2611    0.8030      0.0485
+    moderate      0.0467       0.2616    0.3668      0.0506
+    broken        0.0173       0.2259    0.4125      0.0440
+635 base          0.1500       0.2498    0.3537      0.0413
+    fresh         0.0263       0.2583    0.6413      0.0464
+    moderate      0.2058       0.2510    0.3867      0.0472
+    broken        0.0273       0.2665    0.4874      0.0489
+   Files reaching >= 0.99 of full scale: 0
+   Most common peak values (a spike here would suggest per-file normalisation): {0.2476: 7, 0.2624: 6, 0.237: 6}
+
+Plots: 16 files plotted (seed 42), colour scale -62 to 18 dB, 0-24000 Hz, waveform y-axis +/-0.416. Saved to analysis\plots

@@ -1,0 +1,18 @@
+
+520 rpm: nominal spindle 8.67 Hz, measured 8.30 Hz, tooth passing 33.20 Hz
+  base      strongest envelope peaks (Hz): [8.3, 8.67, 8.79, 17.33, 17.46]
+  fresh     strongest envelope peaks (Hz): [3.05, 3.54, 8.18, 8.3, 10.38]
+  moderate  strongest envelope peaks (Hz): [4.52, 8.18, 8.3, 16.48, 16.6]
+  broken    strongest envelope peaks (Hz): [3.05, 3.17, 3.3, 3.42, 8.3]
+
+635 rpm: nominal spindle 10.58 Hz, measured 10.01 Hz, tooth passing 40.04 Hz
+  base      strongest envelope peaks (Hz): [10.13, 10.5, 10.62, 21.12, 21.24]
+  fresh     strongest envelope peaks (Hz): [3.17, 3.66, 10.01, 10.38, 10.5]
+  moderate  strongest envelope peaks (Hz): [10.01, 10.13, 20.02, 20.14, 20.26]
+  broken    strongest envelope peaks (Hz): [3.05, 4.03, 10.01, 10.13, 10.38]
+
+Tooth-passing minus spindle pulse power (dB), median per class:
+wear_class  base  fresh  moderate  broken
+rpm                                      
+520         -1.2    2.1      -1.2    -0.7
+635         -5.4    2.4       2.8    -0.4
