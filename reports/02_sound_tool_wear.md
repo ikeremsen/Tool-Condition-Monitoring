@@ -193,6 +193,6 @@ The last two scripts each take about 5 minutes; `cross_speed_model.py` caches it
 - Kothuru, Nooka, Liu, [Application of audible sound signals for tool wear monitoring using machine learning techniques in end milling](https://link.springer.com/10.1007/s00170-017-1460-1), Int J Adv Manuf Technol 95, 2018.
 - [A study on the wear estimation of end mill using sound frequency analysis](https://koreascience.or.kr/article/JAKO200311921771007.page?lang=en), KoreaScience.
 - [US patent 5319357, Metal cutting tool failure event sensor](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5319357).
-- [Tool Wear Detection in Milling Using Convolutional Neural Networks and Audible Sound Signals](https://www.mdpi.com/2075-1702/14/1/59), Machines 14(1), 59, 2026 (same dataset, CNN on MFCCs).
+- [Tool Wear Detection in Milling Using Convolutional Neural Networks and Audible Sound Signals](https://www.mdpi.com/2075-1702/14/1/59), Machines 14(1), 59, 2026 (same two speeds, apparently the same dataset; CNN on MFCCs).
 - [Diagnostics 101: envelope analysis tutorial](https://www.mdpi.com/2076-3417/10/20/7302), Applied Sciences, 2020.
 - [What's an order?](https://community.sw.siemens.com/articles/en_US/Knowledge/what-s-an-order), Siemens.
